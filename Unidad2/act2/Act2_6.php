@@ -1,3 +1,4 @@
+<?php
 /*
 ---
 title: Ejercicio 6: Variables de configuracion
@@ -6,6 +7,7 @@ tags: [basico, var_dump, print_r]
 code: https://github.com/usuario/repo/blob/main/unidad1/ej2.php
 ---
 */
+?>
 <!DOCTYPE html>
 <html lang="en">
 

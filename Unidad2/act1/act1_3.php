@@ -1,11 +1,13 @@
+<?php
 /*
 ---
 title: Ejercicio 3: Tabla variables
 desc: Hacer una tabla que muestre unas variables antes almacenadas.
-tags: [PHP, basico]
+tags: [basico, tabla]
 code: https://github.com/usuario/repo/blob/main/unidad1/ej2.php
 ---
 */
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

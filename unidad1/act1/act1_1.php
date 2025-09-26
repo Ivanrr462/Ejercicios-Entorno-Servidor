@@ -1,9 +1,9 @@
 <?php
 /*
 ---
-title: Ejercicio 1: Imprimir número PI
-desc: Imprimir número PI con constante M_PI
-tags: [basico, PI]
+title: Ejercicio 1: Primer ejercicio en PHP
+desc: Hola Mundo en PHP
+tags: [PHP, basico]
 code: https://github.com/usuario/repo/blob/main/unidad1/ej2.php
 ---
 */
@@ -17,8 +17,7 @@ code: https://github.com/usuario/repo/blob/main/unidad1/ej2.php
 </head>
 <body>
     <?php
-        $pi = M_PI;
-        printf("El valor de pi es %.2f", $pi);
+        echo "Hola Mundo desde PHP";
     ?>
 </body>
 </html>

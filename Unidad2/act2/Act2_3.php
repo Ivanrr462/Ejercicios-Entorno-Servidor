@@ -1,3 +1,4 @@
+<?php
 /*
 ---
 title: Ejercicio 3: Nave espacial
@@ -6,6 +7,7 @@ tags: [basico, operadores, <=>]
 code: https://github.com/usuario/repo/blob/main/unidad1/ej2.php
 ---
 */
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">

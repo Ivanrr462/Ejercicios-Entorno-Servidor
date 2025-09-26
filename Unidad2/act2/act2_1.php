@@ -1,3 +1,4 @@
+<?php
 /*
 ---
 title: Ejercicio 1: Test
@@ -6,6 +7,7 @@ tags: [basico, operadores]
 code: https://github.com/usuario/repo/blob/main/unidad1/ej2.php
 ---
 */
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

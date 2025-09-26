@@ -1,3 +1,4 @@
+<?php
 /*
 ---
 title: Ejercicio 4: Operador Terniario
@@ -6,6 +7,7 @@ tags: [basico, operadores, terniario]
 code: https://github.com/usuario/repo/blob/main/unidad1/ej2.php
 ---
 */
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

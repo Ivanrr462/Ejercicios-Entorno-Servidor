@@ -1,3 +1,4 @@
+<?php
 /*
 ---
 title: Ejercicio 5: Precedencia de operadores
@@ -6,6 +7,7 @@ tags: [basico, operadores, precedencia]
 code: https://github.com/usuario/repo/blob/main/unidad1/ej2.php
 ---
 */
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

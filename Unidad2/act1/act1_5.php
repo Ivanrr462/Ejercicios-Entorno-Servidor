@@ -1,11 +1,13 @@
+<?php
 /*
 ---
 title: Ejercicio 5: Dados
 desc: 2 dados con un numero random y luego la suma de ambos.
-tags: [PHP, basico]
+tags: [basico, dados, concanetación]
 code: https://github.com/usuario/repo/blob/main/unidad1/ej2.php
 ---
 */
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
