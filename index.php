@@ -42,6 +42,19 @@
         $modulo = "DWES";
         echo "<p>Las siglas de este módulo es $modulo.</p>";
         echo '<p>Las siglas de este módulo es $modulo</p>';
-    ?>
+
+        $booleano = true;
+        $frutas = array("Manzana", "Banana", "Naranja");
+
+        print_r($booleano);
+        echo "<br>";
+        print_r($frutas);
+        echo "<br>";
+        var_dump($frutas);
+        echo "<br>";
+
+        $accion = random_int(1,10)<5 ? 'cantar' : 'bailar';
+        echo 'Ahora tienes que '.$accion;
+    ?> 
 </body>
 </html>

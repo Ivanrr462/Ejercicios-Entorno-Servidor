@@ -1,3 +1,11 @@
+/*
+---
+title: Ejercicio 2: 2 números azar
+desc: 2 números azar y media aritmética de ambos.
+tags: [PHP, basico]
+code: https://github.com/usuario/repo/blob/main/unidad1/ej2.php
+---
+*/
 <!DOCTYPE html>
 <html lang="en">
 <head>

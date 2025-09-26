@@ -7,8 +7,15 @@
 </head>
 <body>
     <?php
-        $pi = M_PI;
-        printf("El valor de pi es %.2f", $pi);
+
+    $saldo = "1000";
+    $ingreso = 250;
+
+    $saldo_int = (int) $saldo;
+    $saldo_int += $ingreso;
+
+    echo $saldo<1200 ? "Cliente Vip" : "Cliente Normal";
+
     ?>
 </body>
 </html>

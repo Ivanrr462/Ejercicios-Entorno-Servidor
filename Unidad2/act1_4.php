@@ -1,3 +1,11 @@
+/*
+---
+title: Ejercicio 4: Porcentaje aleatorio
+desc: Genera un porcentaje aleatorio y muestralo con el control meter.
+tags: [PHP, basico]
+code: https://github.com/usuario/repo/blob/main/unidad1/ej2.php
+---
+*/
 <!DOCTYPE html>
 <html lang="en">
 <head>
