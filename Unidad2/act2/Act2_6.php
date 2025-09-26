@@ -1,3 +1,11 @@
+/*
+---
+title: Ejercicio 6: Variables de configuracion
+desc: Uso del print_r para variables de configuracion
+tags: [basico, var_dump, print_r]
+code: https://github.com/usuario/repo/blob/main/unidad1/ej2.php
+---
+*/
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,14 +30,25 @@
     print_r($clave . "<br>");
     print_r($debug . "<br>");
 
+    echo "<br>";
     echo var_dump($host . "<br>");
     echo var_dump($puerto . "<br>");
     echo var_dump($usuario . "<br>");
     echo var_dump($clave . "<br>");
     echo var_dump($debug . "<br>");
 
-    $puerto = settype($puerto, "integer");
-    $debug = settype($debug, "boolean");
+    settype($puerto, "int");
+    settype($debug, "bool");
+    $clave = $clave ?? '';
+    //Usando el operador elvis
+    //$clave = $clave ?: '';
+
+    echo "<br>";
+    var_dump($host . "<br>");
+    echo var_dump($puerto . "<br>");
+    echo var_dump($usuario . "<br>");
+    echo var_dump($clave . "<br>");
+    echo var_dump($debug . "<br>");
 
     ?>
 </body>

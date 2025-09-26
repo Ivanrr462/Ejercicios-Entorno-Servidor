@@ -1,3 +1,11 @@
+/*
+---
+title: Ejercicio 4: Operador Terniario
+desc: Uso del operador terniario
+tags: [basico, operadores, terniario]
+code: https://github.com/usuario/repo/blob/main/unidad1/ej2.php
+---
+*/
 <!DOCTYPE html>
 <html lang="en">
 <head>
