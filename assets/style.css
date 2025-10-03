@@ -127,12 +127,13 @@ main { max-width: 1100px; margin: 0 auto; padding: 1.25rem; }
 
 /* Botones */
 .actions { display: flex; gap: .5rem; margin-top: auto; }
-.btn, .ghost {
+.btn, .btn1,.ghost {
   display: inline-flex; align-items: center; justify-content: center;
   text-decoration: none; padding: .5rem .7rem; border-radius: .55rem;
   font-weight: 600; border: 1px solid transparent;
 }
 .btn { background: #1f6feb; color: #fff; }
+.btn1 {background: #0a570b; color: #fff; }
 .btn:hover { filter: brightness(1.08); }
 .ghost { border-color: #30363d; color: #e6edf3; }
 .ghost:hover { background: #161b22; }
