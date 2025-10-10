@@ -20,15 +20,34 @@ code: https://github.com/usuario/repo/blob/main/unidad1/ej2.php
 <body>
     <?php
 
-    $enteros = range(0, 100);
+    $productos = [
+        ["nombre" => "Bolígrafo",         "precio" => 1.50],
+        ["nombre" => "Cuaderno",          "precio" => 3.20],
+        ["nombre" => "Auriculares",       "precio" => 25.00],
+        ["nombre" => "Ratón inalámbrico", "precio" => 18.90],
+        ["nombre" => "Teclado mecánico",  "precio" => 45.99]
+    ];
 
+    echo "<h3>Todos los productos</h3>";
+    echo "<table border='1'>";
+    echo "<tr><th>Nombre</th><th>Precio (€)</th></tr>";
+    foreach ($productos as $p) {
+        echo "<tr><td>{$p['nombre']}</td><td>{$p['precio']}</td></tr>";
+    }
+    echo "</table>";
 
-    $random = array_rand($enteros, 3);
+    $filtrados = array_filter($productos, function($producto) {
+        return $producto['precio'] > 20;
+    });
 
-    $media = ($random[0] + $random[1] + $random[2]) / 3;
-
-
-    printf("La media de %s, %s, %s es %.2f\n", $random[0], $random[1], $random[2], $media);
+    // Mostrar tabla filtrada
+    echo "<h3>Productos con precio superior a 20 €</h3>";
+    echo "<table border='1'>";
+    echo "<tr><th>Nombre</th><th>Precio (€)</th></tr>";
+    foreach ($filtrados as $p) {
+        echo "<tr><td>{$p['nombre']}</td><td>{$p['precio']}</td></tr>";
+    }
+    echo "</table>";
 
     ?>
 
