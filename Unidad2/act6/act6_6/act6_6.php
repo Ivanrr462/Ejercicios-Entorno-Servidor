@@ -18,9 +18,13 @@ code: https://github.com/usuario/repo/blob/main/unidad1/ej2.php
 </head>
 
 <body>
-    <?=require_once  __DIR__ . 'header.php'?>
-        <p>Bienvenido a la página principal de mi mini sitio.</p>
-    <?=require_once  __DIR__ . 'footer.php'?>
+    <?php
+    require 'header.php';
+    ?>
+    <p>Bienvenido a la página principal de mi mini sitio.</p>
+    <?php
+    require 'footer.php';
+    ?>
 </body>
 
 </html>

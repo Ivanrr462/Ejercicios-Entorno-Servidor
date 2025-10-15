@@ -1,5 +1,5 @@
 <?php
-include 'config.php';
+require 'config.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,12 +11,14 @@ include 'config.php';
 </head>
 
 <body>
-    <h1><?php echo $titulo; ?></h1>
-    <nav>
-        <a href="act6_6.php">Inicio</a></li>
-        <a href="about.php">Sobre mí</a>
-        <a href="contact.php">Contacto</a>
-    </nav>
+    <header>
+        <h1><?php echo $titulo; ?></h1>
+        <nav>
+            <a href="act6_6.php">Inicio</a> |
+            <a href="about.php">Sobre mí</a> |
+            <a href="contact.php">Contacto</a>
+        </nav>
+    </header>
 </body>
 
 </html>

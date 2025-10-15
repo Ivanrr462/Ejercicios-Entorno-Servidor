@@ -1,5 +1,5 @@
 <?php
-    include 'config.php';
+    require 'config.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,6 +9,8 @@
     <title>Document</title>
 </head>
 <body>
-    <p><small>Autor: <?php echo $autor; ?> | Año: <?php echo $año; ?></small></p>
+   <footer>
+        <p>&copy; <?php echo $autor . " - " . $año; ?></p>
+    </footer>
 </body>
 </html>

@@ -8,9 +8,13 @@
 </head>
 
 <body>
-    <?=require_once  __DIR__ . 'header.php'?>
-        <p>Puedes escribirme a: ejemplo@correo.com</p>
-    <?=require_once  __DIR__ . 'footer.php'?>
+    <?php
+    require 'header.php';
+    ?>
+    <p>Puedes escribirme a: ejemplo@correo.com</p>
+    <?php
+    require 'footer.php';
+    ?>
 </body>
 
 </html>
