@@ -50,7 +50,7 @@ code: https://github.com/usuario/repo/blob/main/unidad1/ej2.php
         die ("❌ Error crítico: No hay token de acceso. El servidor no puede arrancar.");
     }
 
-    if ($temperatura < 0 | $temperatura > 20){
+    if ($temperatura < 0 | $temperatura > 80){
         trigger_error("La temperatura no deberia ser mayor a 80 o menor de 0.", E_USER_WARNING);
     }
 
