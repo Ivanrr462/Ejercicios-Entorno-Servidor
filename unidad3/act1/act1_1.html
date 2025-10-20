@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"
+    />
+    <link rel="stylesheet" href="codigo1.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Formulario Web</h1>
+      <form action="formulario.php" method="post">
+        <label for="nombre"
+          >Nombre <input type="text" name="nombre" id="nombre" required
+        /></label>
+        <label>Apellidos <input type="text" name="apellidos" id="ap" /></label>
+        <label>Correo <input type="email" name="email" /></label>
+        <label>URL <input type="url" name="url" /></label>
+
+        <label>Género</label>
+        <label><input type="radio" name="genero" value="m" />Masculino</label>
+        <label><input type="radio" name="genero" value="f" />Femenino</label>
+        <label><input type="radio" name="genero" value="o" />Otro</label>
+
+        <label
+          >Numero convivientes <input type="number" name="convivientes"
+        /></label>
+
+        <label>Habilidades adicionales</label>
+        <label
+          ><input type="checkbox" name="aficiones[]" value="lec" />Lectura</label
+        >
+        <label
+          ><input type="checkbox" name="aficiones[]" value="dep" />Deporte</label
+        >
+        <label
+          ><input type="checkbox" name="aficiones[]" value="via" />Viajar</label
+        >
+        <label
+          ><input type="checkbox" name="aficiones[]" value="cin" />Cine</label
+        >
+
+        <label
+          >Menú favorito
+          <select name="menu">
+            <option value="">- Selecciona -</option>
+            <option value="pasta">Pasta</option>
+            <option value="sushi">Sushi</option>
+            <option value="ensalada">Ensalada</option>
+            <option value="pizza">Pizza</option>
+          </select>
+        </label>
+
+        <input type="submit" value="Enviar" />
+      </form>
+    </main>
+  </body>
+</html>
