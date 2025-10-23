@@ -14,34 +14,42 @@
     <main class="container">
       <h1>Formulario Web</h1>
       <form action="formulario.php" method="post">
-        <label for="nombre"
-          >Nombre <input type="text" name="nombre" id="nombre" required
-        /></label>
-        <label>Apellidos <input type="text" name="apellidos" id="ap" /></label>
-        <label>Correo <input type="email" name="email" /></label>
-        <label>URL <input type="url" name="url" /></label>
+        <label>Nombre <input type="text" name="nombre" id="nombre"></label>
+        <label>Apellidos <input type="text" name="apellidos" id="ap"></label>
+        <label>Correo <input type="text" name="email"></label>
+        <label>URL <input type="text" name="url"></label>
 
         <label>Género</label>
-        <label><input type="radio" name="genero" value="m" />Masculino</label>
-        <label><input type="radio" name="genero" value="f" />Femenino</label>
-        <label><input type="radio" name="genero" value="o" />Otro</label>
+        <label><input type="radio" name="genero" value="m">Masculino</label>
+        <label><input type="radio" name="genero" value="f">Femenino</label>
+        <label><input type="radio" name="genero" value="o">Otro</label>
+
+
 
         <label
           >Numero convivientes <input type="number" name="convivientes"
-        /></label>
+        ></label>
 
-        <label>Habilidades adicionales</label>
+        <label>Aficiones</label>
         <label
-          ><input type="checkbox" name="aficiones[]" value="lec" />Lectura</label
+          ><input
+            type="checkbox"
+            name="aficiones[]"
+            value="lec"
+          >Lectura</label
         >
         <label
-          ><input type="checkbox" name="aficiones[]" value="dep" />Deporte</label
+          ><input
+            type="checkbox"
+            name="aficiones[]"
+            value="dep"
+          >Deporte</label
         >
         <label
-          ><input type="checkbox" name="aficiones[]" value="via" />Viajar</label
+          ><input type="checkbox" name="aficiones[]" value="via">Viajar</label
         >
         <label
-          ><input type="checkbox" name="aficiones[]" value="cin" />Cine</label
+          ><input type="checkbox" name="aficiones[]" value="cin">Cine</label
         >
 
         <label
@@ -55,7 +63,7 @@
           </select>
         </label>
 
-        <input type="submit" value="Enviar" />
+        <input type="submit" value="Enviar">
       </form>
     </main>
   </body>
