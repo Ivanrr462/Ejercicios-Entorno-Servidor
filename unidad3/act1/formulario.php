@@ -36,15 +36,15 @@ if (!empty($apellidos))
 else
     $errores[] = 'No se han especificado los apellidos';
 
-if (!empty($email))
+if (!empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL))
     $valores['email'] = "El email es " . htmlspecialchars($email);
 else
-    $errores[] = 'No se ha especificado el email';
+    $errores[] = 'Email incorrecto, debe ser formato a@example.com';
 
-if (!empty($url))
+if (!empty($url) && filter_var($url, FILTER_VALIDATE_URL))
     $valores['url'] = "La url es " . htmlspecialchars($url);
 else
-    $errores[] = 'No se ha especificado la url';
+    $errores[] = 'Url incorrecta, debe ser formato http://example.com';
 
 define('OPCIONES', ['m', 'f', 'o']);
 if (!empty($_POST['genero'])) {
@@ -97,6 +97,7 @@ if (!empty($menu)) {
 </head>
 
 <body>
+    <main class="container">
     <?php
     if (!empty($errores)) {
         echo "<h2>Errores encontrados:</h2><ul>";
@@ -112,6 +113,7 @@ if (!empty($menu)) {
         echo "</table>";
     }
     ?>
+    </main>
 </body>
 
 </html>

@@ -11,3 +11,6 @@
 [24-Oct-2025 14:04:35 UTC] PHP Warning:  Undefined array key "aficiones" in /var/www/html/unidad3/act1/formulario.php on line 12
 [24-Oct-2025 14:05:38 UTC] PHP Warning:  Undefined array key "aficiones" in /var/www/html/unidad3/act1/formulario.php on line 12
 [24-Oct-2025 14:06:04 UTC] PHP Warning:  Undefined array key "aficiones" in /var/www/html/unidad3/act1/formulario.php on line 12
+[24-Oct-2025 16:39:56 Europe/Paris] PHP Warning:  Undefined array key "aficiones" in /home/ivan123/www/unidad3/act1/formulario.php on line 12
+[24-Oct-2025 16:40:39 Europe/Paris] PHP Warning:  Undefined array key "aficiones" in /home/ivan123/www/unidad3/act1/formulario.php on line 12
+[24-Oct-2025 16:43:19 Europe/Paris] PHP Warning:  Undefined array key "aficiones" in /home/ivan123/www/unidad3/act1/formulario.php on line 12
