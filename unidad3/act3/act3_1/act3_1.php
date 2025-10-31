@@ -10,6 +10,13 @@ code: https://github.com/usuario/repo/blob/main/unidad1/ej2.php
 
 session_start();
 
+if (!isset($_SESSION['votosA'])) {
+    $_SESSION['votosA'] = 0;
+}
+if (!isset($_SESSION['votosB'])) {
+    $_SESSION['votosB'] = 0;
+}
+
 $opcionA = $_SESSION['votosA'];
 $opcionB = $_SESSION['votosB'];
 
