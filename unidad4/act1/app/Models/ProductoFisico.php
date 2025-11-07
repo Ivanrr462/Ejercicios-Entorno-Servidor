@@ -1,7 +1,6 @@
 <?php
 
 namespace ProductoFisico;
-require 'Producto/Producto.php';
 use Producto\Producto;
 
 class ProductoFisico extends Producto {
@@ -18,6 +17,6 @@ class ProductoFisico extends Producto {
     }
 
     public function mostrarResumen() {
-        return "📦 Producto físico {$this->getCodigo()} - $this->precio() € ( $this->peso() Kg)";
+        echo "📦 Producto físico {$this->getCodigo()} - $this->precio € ( $this->peso Kg )<br><br>";
     }
 }

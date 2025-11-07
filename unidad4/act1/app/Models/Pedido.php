@@ -1,8 +1,8 @@
 <?php
 
 namespace Pedido;
-require '../Interfaces/DetalleInterfaz/DetalleInterface.php';
-use DetalleInterfaz\DetalleInterface;
+
+use DetalleInterface\DetalleInterface;
 use Cliente\Cliente;
 use ProductoDigital\ProductoDigital;
 use ProductoFisico\ProductoFisico;
@@ -27,9 +27,9 @@ class Pedido implements DetalleInterface {
         
         $total = 0;
 
-        foreach($this->producto as $producto){
-            $producto->mostrarResumen();
-            $total+=$producto->getPrecio();
+        foreach($this->producto as $productos){
+            $productos->mostrarResumen();
+            $total+=$productos->getPrecio();
         }
 
         echo "<strong>Total: $total €</strong>";

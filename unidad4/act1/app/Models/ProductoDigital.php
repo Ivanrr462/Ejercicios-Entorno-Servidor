@@ -1,7 +1,6 @@
 <?php
 
 namespace ProductoDigital;
-require 'Producto/Producto.php';
 use Producto\Producto;
 
 class ProductoDigital extends Producto {
@@ -18,6 +17,6 @@ class ProductoDigital extends Producto {
     }
 
     public function mostrarResumen() {
-        return "💾 Producto digital {$this->getCodigo()} - $this->precio() € ( $this->tamanoArchivo() MB)";
+        echo "💾 Producto digital {$this->getCodigo()} - $this->precio € ( $this->tamanoArchivo MB )<br><br>";
     }
 }

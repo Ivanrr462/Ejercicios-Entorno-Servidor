@@ -1,6 +1,6 @@
 <?php
 
-namespace DetalleInterfaz;
+namespace DetalleInterface;
 
 interface DetalleInterface {
     public function mostrarDetalle();
