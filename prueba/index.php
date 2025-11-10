@@ -2,30 +2,21 @@
 try {
     require_once __DIR__ . '/conexion.php';
 
-    // Sentencia SQL con parámetros nombrados
-    $sql = "INSERT INTO tienda (nombre, tlf) VALUES (:nombre, :tlf)";
-    $stmt = $conn->prepare($sql);
+    // Crear una tabla
+        $conn->exec("CREATE TABLE IF NOT EXISTS productos (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            nombre VARCHAR(100) NOT NULL,
+            precio DECIMAL(10,2)
+        )");
 
-    // Asociamos variables a los parámetros
-    $stmt->bindParam(':nombre', $nombre);
-    $stmt->bindParam(':tlf', $tlf);
+        // Agregar una columna nueva
+        $conn->exec("ALTER TABLE productos ADD COLUMN stock INT DEFAULT 0");
 
-    // Insertamos varios registros nuevos
-    $nombre = "Librería Central";
-    $tlf = "910223344";
-    $stmt->execute();
+        // Vaciar una tabla
+        $conn->exec("TRUNCATE TABLE productos");
 
-    $nombre = "PetWorld";
-    $tlf = "931445566";
-    $stmt->execute();
-
-    $nombre = "Muebles Rivera";
-    $tlf = "945667788";
-    $stmt->execute();
-
-    echo "✅ Nuevos registros insertados correctamente usando bindParam().";
+        echo "Operaciones DDL ejecutadas correctamente.";
 
 } catch (PDOException $e) {
     echo "❌ Error: " . $e->getMessage();
 }
-?>
