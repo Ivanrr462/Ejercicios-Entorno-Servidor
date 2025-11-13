@@ -14,7 +14,7 @@ class CursoModelo {
         $sql = "INSERT INTO cursos (nombre) VALUES (:nombre)";
         $tmp = $this->pdo->prepare($sql);
 
-        $tmp->bindParam(' :nombre', $nombre, PDO::PARAM_STR);
+        $tmp->bindParam(' :nombre', $nombre);
         $tmp->execute();
         $id = $this->pdo->lastInsertId();
         return $id;
@@ -41,8 +41,6 @@ class CursoModelo {
     }
 
     public function vaciarTodo() : void {
-        $sql = "DELETE * FROM cursos";
-        $tmp = $this->pdo->prepare($sql);
-        $tmp -> execute();
+        $this->pdo->exec("TRUNCATE TABLE cursos");
     }
 }
