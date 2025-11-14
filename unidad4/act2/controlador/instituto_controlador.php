@@ -18,12 +18,15 @@ class InstitutoControlador
 
     public function ejecutar(): array
     {
+        $this->estudiante->vaciarTodo();
+        $this->curso->vaciarTodo();
+
         $cursoCiber = $this->curso->agregar("Ciberseguridad");
         $cursoProgra = $this->curso->agregar("Programacion Web");
 
-        $estudiante1 = $this->estudiante->agregar("Ana Perez", 20, $cursoCiber);
-        $estudiante2 = $this->estudiante->agregar("Carlos Perez", 23, $cursoProgra);
-        $estudiante3 = $this->estudiante->agregar("Miguel Gutierrez", 19);
+        $this->estudiante->agregar("Ana Perez", 20, $cursoCiber);
+        $this->estudiante->agregar("Carlos Perez", 23, $cursoProgra);
+        $this->estudiante->agregar("Miguel Gutierrez", 19);
 
         $listaInicial = $this->estudiante->conCurso();
 

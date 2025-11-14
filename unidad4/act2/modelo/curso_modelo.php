@@ -14,7 +14,7 @@ class CursoModelo {
         $sql = "INSERT INTO cursos (nombre) VALUES (:nombre)";
         $tmp = $this->pdo->prepare($sql);
 
-        $tmp->bindParam(' :nombre', $nombre);
+        $tmp->bindParam(':nombre', $nombre);
         $tmp->execute();
         $id = $this->pdo->lastInsertId();
         return $id;
@@ -24,7 +24,7 @@ class CursoModelo {
         $sql = "SELECT id FROM cursos WHERE nombre = :nombre";
         $tmp = $this->pdo->prepare($sql);
 
-        $tmp->bindParam(' :nombre', $nombre);
+        $tmp->bindParam(':nombre', $nombre);
         $id = $tmp->execute();
         return $id;
     }
@@ -41,6 +41,7 @@ class CursoModelo {
     }
 
     public function vaciarTodo() : void {
-        $this->pdo->exec("TRUNCATE TABLE cursos");
+        $this->pdo->exec("DELETE FROM cursos");
+        $this->pdo->exec("ALTER TABLE cursos AUTO_INCREMENT = 1");
     }
 }

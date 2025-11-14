@@ -14,9 +14,9 @@ class EstudianteModelo {
         $sql = "INSERT INTO estudiantes (nombre, edad, curso_id) VALUES (:nombre, :edad, :curso_id)";
         $tmp = $this->pdo->prepare($sql);
 
-        $tmp->bindParam(' :nombre', $nombre);
-        $tmp->bindParam(' :edad', $edad);
-        $tmp->bindParam(' :curso_id', $cursoId);
+        $tmp->bindParam(':nombre', $nombre);
+        $tmp->bindParam(':edad', $edad);
+        $tmp->bindParam(':curso_id', $cursoId);
 
         $tmp->execute();
         $id = $this->pdo->lastInsertId();
@@ -24,25 +24,25 @@ class EstudianteModelo {
     }
 
     public function actualizarPorNombre(string $nombreActual, string $nuevoNombre, int $nuevaEdad, int $nuevoCursoId) :void {
-        $sql = "UPDATE estudiante 
-                SET nombre = :nombre, edad = :edad, curso_id = :curso_id
-                WHERE nombre = :nombreNuevo";
+        $sql = "UPDATE estudiantes 
+                SET nombre = :nombreNuevo, edad = :edad, curso_id = :curso_id
+                WHERE nombre = :nombre";
         
         $tmp = $this->pdo->prepare($sql);
 
-        $tmp->bindParam(' :nombre', $nombreActual);
-        $tmp->bindParam(' :edad', $nuevaEdad);
-        $tmp->bindParam(' :curso_id', $nuevoCursoId);
-        $tmp->bindParam(' :nombreNuevo', $nuevoNombre);
+        $tmp->bindParam(':nombre', $nombreActual);
+        $tmp->bindParam(':edad', $nuevaEdad);
+        $tmp->bindParam(':curso_id', $nuevoCursoId);
+        $tmp->bindParam(':nombreNuevo', $nuevoNombre);
 
         $tmp->execute();
     }
 
     public function eliminarPorNombre(string $nombre) : void {
-        $sql = "DELETE * FROM estudiante WHERE nombre = :nombre";
+        $sql = "DELETE FROM estudiantes WHERE nombre = :nombre";
         $tmp = $this->pdo->prepare($sql);
 
-        $tmp->bindParam(' :nombre', $nombre);
+        $tmp->bindParam(':nombre', $nombre);
         $tmp->execute();
     }
 
@@ -55,11 +55,11 @@ class EstudianteModelo {
         $tmp = $this->pdo->prepare($sql);
         $tmp->setFetchMode(PDO::FETCH_ASSOC);
         $tmp->execute();
-        $array = $tmp->fetch();
+        $array = $tmp->fetchAll();
         return $array;
     }
 
     public function vaciarTodo() : void {
-        $this->pdo->exec("TRUNCATE TABLE estudiantes");
+        $this->pdo->exec("DELETE FROM estudiantes");
     }
 }
