@@ -13,12 +13,12 @@
         <h1>🗳️ Votaciones</h1>
         <br><br>
         <form method="post">
-            <?php 
-                foreach (as $opcion) {
-                    echo "<label><input type='radio' name='voto' value='23' required>$opcion['nombre']</label><br>";
+            <?php
+                foreach ($opciones['opciones'] as $opcion) {
+                    echo "<label><input type='radio' name='voto' value=" . $opcion['id'] . " required>" . $opcion['opcion'] . "</label><br>";
                 }
             ?>
-            <button>Votar</button> <small>Total: 22</small>
+            <button>Votar</button> <small>Total: <?= $opcion['total']; ?></small>
         </form>
 
         <h3>Resultados</h3>
@@ -31,13 +31,14 @@
             </tr>
 
             <?php 
-                foreach (as $opcion) {
+                foreach ($opciones['opciones'] as $opcion) {
+                    $porcentaje = ($opcion['votos'] / $opciones['total']) * 100;
                     echo "<tr>";
-                    echo "<td>$opcion['nombre']</td>";
-                    echo "<td>$opcion['votos']</td>";
-                    echo "<td></td>";
+                    echo "<td>" . $opcion['opcion'] . "</td>";
+                    echo "<td>" . $opcion['votos'] . "</td>";
+                    echo "<td>" . number_format($porcentaje, 2) . "%</td>";
                     echo "<td><form method='post' style='margin:0'>
-                        <button name='eliminar' value='23'>❌</button>
+                        <button name='eliminar' value=" . $opcion['id'] . ">❌</button>
                     </form></td>";
                     echo "</tr>";
                 }

@@ -11,14 +11,28 @@ class VoteController {
     }
 
     public function procesar() {
-        $voto = $_POST['voto'];
-        $eliminar = $_POST['eliminar'];
-        $opcion = $_POST['texto'];
-
-        if(isset($voto) && !empty($_POST)) {
-            $this->modelo->
+        if(isset($_POST['voto'])) {
+            $this->modelo->votar($_POST['voto']);
         }
 
-        return $opciones;
+        if (isset($_POST['eliminar'])) {
+            $this->modelo->eliminar($_POST['eliminar']);
+        }
+
+        if (isset($_POST['texto'])) {
+            $this->modelo->agregarOpcion($_POST['texto']);
+        }
+
+        $opciones = $this->modelo->obtenerOpciones();
+        $total = 0;
+
+        foreach ($opciones as $opcion) {
+            $total += $opcion['votos'];
+        }
+
+        return [
+            'opciones' => $opciones,
+            'total' => $total
+        ];
     }
 }

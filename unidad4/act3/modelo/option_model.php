@@ -11,7 +11,7 @@ class OptionModel {
     }
 
     public function obtenerOpciones() {
-        $sql = "SELECT opcion FROM votaciones";
+        $sql = "SELECT * FROM votaciones";
         $tmp = $this->pdo->prepare($sql);
         $tmp -> setFetchMode(PDO::FETCH_ASSOC);
         $tmp -> execute();
@@ -22,11 +22,10 @@ class OptionModel {
     }
 
     public function agregarOpcion(string $texto) {
-        $sql = "INSERT INTO votaciones (opcion, votos) VALUES (:opcion, :votos)";
+        $sql = "INSERT INTO votaciones (opcion, votos) VALUES (:opcion, 0)";
         $tmp = $this->pdo->prepare($sql);
 
         $tmp->bindParam(':opcion', $texto);
-        $tmp->bindParam(':votos', 0);
         $tmp->execute();
     }
 
