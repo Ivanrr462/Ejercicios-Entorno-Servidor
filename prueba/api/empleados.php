@@ -1,11 +1,17 @@
+
 <?php
 // Todas las respuestas serán JSON.
-header("Content-Type: application/json; charset=utf-8");
+header("Content-Type: application/json; charset=utf-8");   
 
+require_once __DIR__ . "/../vendor/autoload.php";
 require_once __DIR__ . "/../config.php";
 require_once __DIR__ . "/../database.php";
 require_once __DIR__ . "/../modelo/empleados_modelo.php";
 require_once __DIR__ . "/../controlador/empleados_controlador.php";
+require_once __DIR__ . '/auth.php';
+
+// Comprueba el token.
+$user = requireAuth(); // Obtenemos el payload.
 
 // Crear conexión, modelo y controlador.
 $db = Database::getConnection();
